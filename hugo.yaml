@@ -1,0 +1,145 @@
+baseURL: "https://<your-github-username>.github.io/MyWebsite/"
+languageCode: "en-us"
+title: "Praveen's Workspace"
+theme: "PaperMod"
+
+# IMPORTANT: change `MyWebsite` in baseURL above to match your repo name,
+# OR set baseURL: "https://<your-github-username>.github.io/" if you use
+# a username.github.io repo (root site).
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableInlineShortcodes: true
+module:
+  imports:
+    - path: github.com/mfg92/hugo-shortcode-gallery
+
+# Pretty URLs without /page/ suffix
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "Praveen's Workspace"
+  description: "Praveen Rajendran's personal portfolio — blogs, projects, Photography and more."
+  author: "Praveen Rajendran"
+
+  # Theme & dark/light toggle
+  defaultTheme: auto       # "auto" follows OS preference; users can still toggle
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: false
+  ShowToc: true
+  TocOpen: false
+  comments: false
+
+  # Footer
+  footer:
+    text: "© 2026 Praveen Rajendran · Powered by [Hugo](https://gohugo.io/) & [PaperMod](https://git.io/hugopapermod)"
+
+  # Home page mode: centered welcome with multi-language greeting,
+  # bio, and three button-style links.
+  # We use "profile" mode because it centers everything by default.
+  profileMode:
+    enabled: true
+    title: "Welcome | fáilte &nbsp;"
+    subtitle: >
+      Curious guy who loves exploring the intersection of technology, creativity, Physics and human connection.
+      This is my personal space to share my thoughts, projects, and passions.
+      Thanks for stopping by! <br>
+    imageUrl: "images/praveen.jpg"   # uncomment to add an avatar above the title
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "Praveen Rajendran"
+    buttons:
+      - name: Blogs
+        url: "/MyWebsite/blogs/"
+      - name: Projects
+        url: "/MyWebsite/projects/"
+      - name: Resume
+        url: "/MyWebsite/docs/RESUME.pdf"
+
+  # Social icons — shown centered below the profile-mode buttons on the home page.
+  # Uncomment / add the ones you want; comment out or delete the rest.
+  # Full list of supported icon names (each has a built-in SVG in PaperMod):
+  #   github, gitlab, bitbucket, linkedin, twitter, x (for X/Twitter),
+  #   facebook, instagram, youtube, twitch, reddit, mastodon, threads,
+  #   discord, slack, telegram, whatsapp, signal, kofi, buymeacoffee,
+  #   patreon, paypal, stackoverflow, medium, dev (dev.to), hashnode,
+  #   substack, goodreads, lastfm, spotify, soundcloud, steam, applemusic,
+  #   email, rss, researchgate, googlescholar, orcid, kaggle, huggingface
+  socialIcons:
+    - name: github
+      title: "GitHub"
+      url: "https://github.com/praveenRI007"
+    - name: linkedin
+      title: "LinkedIn"
+      url: "https://www.linkedin.com/in/praveen-ri-58b2321b4/"
+    - name: email
+      title: "Email"
+      url: "mailto:praveenriemplfizh@gmail.com"
+    - name: instagram
+      title: "Instagram"
+      url: "https://www.instagram.com/praveen_ri1999/"
+  
+  editPost:
+    url: "https://github.com/praveenRI007/MyWebsite/tree/main/content"
+    text: "Suggest changes"
+    appendFilePath: true
+
+  # Asset settings
+  assets:
+    disableFingerprinting: false
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+
+# ----- Navigation menu (your custom tabs) -----
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: blogs
+      name: Blogs
+      url: /blogs/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier: photography
+      name: Photography
+      url: /photography/
+      weight: 45
+
+# Syntax highlighting in blog code blocks
+markup:
+  goldmark:
+    renderer:
+      unsafe: true     # allow raw HTML in markdown (image galleries etc.)
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: monokai
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON   # enables PaperMod search
