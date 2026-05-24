@@ -93,10 +93,10 @@ params:
       title: "Instagram"
       url: "https://www.instagram.com/praveen_ri1999/"
   
-  editPost:
-    url: "https://github.com/praveenRI007/MyWebsite/tree/main/content"
-    text: "Suggest changes"
-    appendFilePath: true
+  # editPost:
+  #   url: "https://github.com/praveenRI007/MyWebsite/tree/main/content"
+  #   text: "Suggest changes"
+  #   appendFilePath: true
 
   # Asset settings
   assets:
