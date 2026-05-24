@@ -46,7 +46,8 @@ params:
 
   # Footer
   footer:
-    text: "© 2026 Praveen Rajendran · Powered by [Hugo](https://gohugo.io/) & [PaperMod](https://git.io/hugopapermod)"
+    hideCopyright: true
+    text: "© 2026 Praveen Rajendran "
 
   # Home page mode: centered welcome with multi-language greeting,
   # bio, and three button-style links.

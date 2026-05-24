@@ -8,4 +8,3 @@ ShowBreadCrumbs: false
 ShowWordCount: false
 ---
 
-Longer-form portfolio pieces. Each project gets its own page.
