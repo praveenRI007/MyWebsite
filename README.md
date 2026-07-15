@@ -3,6 +3,8 @@
 Personal portfolio built with [Hugo](https://gohugo.io/) and the
 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme.
 
+Here is my website : [link](https://praveenri007.github.io/MyWebsite/)
+
 ## 1. Prerequisites
 
 - [Hugo (extended)](https://gohugo.io/installation/) v0.128+ — `hugo version` should mention `extended`
